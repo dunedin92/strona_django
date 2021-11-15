@@ -6,7 +6,19 @@
 </head>
 
 <body>
-    <h1>Czesc na stronie bloga!</h1>
+    <div>
+        <h1>Czesc na stronie bloga!</h1>
+    </div>
+        <p> poniżej wyswietlą sie dane z bazy danych:</p><br>
+
+        {% for post in posts %}
+    <div>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>opublikowany: {{ post.publish_date }}</p>
+        <em>{{ post.text|linebreaksbr }}</em>
+    </div>
+    {% endfor %}
+
 </body>
 
 </html>
